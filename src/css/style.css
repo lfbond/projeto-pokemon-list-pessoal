@@ -15,6 +15,11 @@ body.modo-dark h2.title{
  color: var(--text-title);
 }
 
+body.modo-dark main ul li.cartao-pokemon  {
+ background-color: var(--bg-card-pokemon-dark);
+ color: var(--text-dark);
+}
+
 header {
  display: flex;
  justify-content: space-between;
@@ -105,6 +110,7 @@ main .cartao-pokemon .tipos {
 main .cartao-pokemon .tipo {
  padding: 0.5rem;
  border-radius: 10px;
+ font-size: 0.8rem;
 }
 
 .normal {
@@ -196,6 +202,6 @@ main .cartao-pokemon .tipo {
 main .descricao {
  max-height: 80px;
  overflow-y: scroll;
- font-size: 1rem;
+ font-size: 0.8rem;
  padding-right: 10px;
 }

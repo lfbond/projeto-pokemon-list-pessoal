@@ -19,8 +19,8 @@ ul{
 
  /* Tema Dark */
  --bg-dark: #1f1f1f;
- --bg-card-pokemon-dark: #a8a8a8;
- --text-dark: #7e7777;
+ --bg-card-pokemon-dark: #615555;
+ --text-dark: #c7baba;
  --text-title: #ffffff;
 
  /* Tipos */
@@ -40,6 +40,6 @@ ul{
  --psiquico: #bc58c5;
  --gelo: #5d9bc5;
  --dragao: #6b10e2;
- --dark: #3b310e;
+ /* --sombrio: #3b310e; */
  --fada: #a14e9d;
 }
