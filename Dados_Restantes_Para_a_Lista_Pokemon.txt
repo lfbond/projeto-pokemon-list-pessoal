@@ -1,6 +1,0 @@
-Lista de Gif para os Pokemons:
-
-https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif
-
-
-<!-- palavras chaves: 1. plano, 2.Implacavel , 3.em e 4. . -->
