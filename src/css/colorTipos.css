@@ -1,0 +1,85 @@
+.normal {
+ background-color: var(--normal); 
+ color: #fff;
+}
+.lutador {
+ background-color: var(--lutador);
+ color: #fff;
+}
+.voador {
+ background-color: var(--voador);
+ color: #fff;
+}
+.veneno {
+ background-color: var(--veneno);
+ color: #fff;
+}
+
+.terra {
+ background-color: var(--terra);
+ color: #fff;
+}
+.pedra {
+ background-color: var(--pedra);
+ color: #fff;
+}
+
+.inseto {
+ background-color: var(--inseto);
+ color: #fff;
+}
+
+.fantasma {
+ background-color: var(--fantasma);
+ color: #fff;
+}
+
+.metal {
+ background-color: var(--metal);
+ color: #fff;
+}
+
+.fogo {
+ background-color: var(--fogo);
+ color: #fff;
+}
+
+.agua {
+ background-color: var(--agua);
+ color: #fff;
+}
+
+.grama {
+ background-color: var(--grama);
+ color: #fff;
+}
+
+.eletrico {
+ background-color: var(--eletrico);
+ color: #000;
+}
+
+.psiquico {
+ background-color: var(--psiquico);
+ color: #fff;
+}
+
+.gelo {
+ background-color: var(--gelo);
+ color: #fff;
+}
+
+.dragao {
+ background-color: var(--dragao);
+ color: #fff;
+}
+
+.sombrio {
+ background-color: var(--sombrio);
+ color: #fff;
+}
+
+.fada {
+ background-color: var(--fada);
+ color: #fff;
+}
