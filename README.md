@@ -1,7 +1,3 @@
-Aqui está um exemplo de README que você pode usar para o site que você compartilhou, o projeto "Pokémon List Pessoal":
-
----
-
 # Projeto Pokémon List Pessoal
 
 Bem-vindo ao **Projeto Pokémon List Pessoal**! Este site é uma aplicação interativa que permite aos usuários visualizarem, organizarem e explorarem uma lista personalizada de Pokémon. O projeto é uma ótima maneira de aprender mais sobre a franquia Pokémon enquanto pratica habilidades de desenvolvimento web.
@@ -55,7 +51,3 @@ Contribuições são bem-vindas! Se você tem sugestões de melhorias, encontre 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo `LICENSE`.
-
----
-
-Com isso, você tem um README completo e informativo, que explica o propósito, as funcionalidades, as tecnologias usadas, e como as pessoas podem contribuir para o projeto!
