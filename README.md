@@ -20,6 +20,11 @@ O objetivo deste projeto é fornecer uma interface amigável para que os usuári
 - **JavaScript**: Manipulação de dados e interatividade com o usuário.
 - **API Pokémon**: Integração com a [PokeAPI](https://pokeapi.co/) para busca de informações sobre os Pokémon.
 
+## Imagem do Projeto:
+
+![01-pokemon](https://github.com/user-attachments/assets/5fd48ada-9f17-4efc-83d9-6fd198c5d08a)
+
+
 ## 📦 Como Executar o Projeto
 
 1. Clone este repositório em sua máquina local:
