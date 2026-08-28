@@ -434,7 +434,7 @@ Se você tiver dúvidas ou precisar de ajuda:
 
 **[⬆ Voltar ao Topo](#-projeto-pokémon-list-pessoal)**
 
-Feito com ❤️ por [Luis Fernando Bond](https://github.com/lfbond)
+Feito com ❤️ por [Luis Felipe Bond](https://github.com/lfbond)
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=lfbond.projeto-pokemon-list-pessoal)
 
