@@ -391,7 +391,7 @@ Encontrou um bug? Abra uma [issue](https://github.com/lfbond/projeto-pokemon-lis
 
 ## 👥 Autores
 
-**Luis Fernando Bond**
+**Luis Felipe Bond**
 - GitHub: [@lfbond](https://github.com/lfbond)
 - Email: contato@lfbond.com
 - Portfolio: [lfbond.com](https://lfbond.com)
