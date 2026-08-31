@@ -2,7 +2,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- font-family: 'Poppins', sans-serif;
+ font-family: 'Montserrat', sans-serif;
 }
 
 ul{
@@ -24,22 +24,22 @@ ul{
  --text-title: #ffffff;
 
  /* Tipos */
- --normal: #9c9a9a;
- --lutador: #aa2525;
- --voador: #5b4585;
- --veneno: #681568;
- --terra: #af9c5d;
- --pedra: #4b4604;
- --inseto: #95af4e;
- --fantasma: #2d065a;
- --metal: #c5c5c5;
- --fogo: #ce620a;
- --agua: #1669c9;
- --grama: #27d417;
- --eletrico: #fffb07;
- --psiquico: #bc58c5;
- --gelo: #5d9bc5;
- --dragao: #6b10e2;
- --sombrio: #13110a;
- --fada: #a14e9d;
+ --normal: #9c9a9a;/* 1 */
+ --lutador: #aa2525;/* 2 */
+ --voador: #5b4585;/* 3 */
+ --veneno: #681568;/* 4 */
+ --terra: #af9c5d;/* 5 */
+ --pedra: #4b4604;/* 6 */
+ --inseto: #95af4e;/* 7 */
+ --fantasma: #2d065a;/* 8 */
+ --metal: #c5c5c5;/* 9 */
+ --fogo: #ce620a;/* 10 */
+ --agua: #1669c9;/* 11 */
+ --grama: #27d417;/* 12 */
+ --eletrico: #fffb07;/* 13 */
+ --psiquico: #bc58c5;/* 14 */
+ --gelo: #5d9bc5;/* 15 */
+ --dragao: #6b10e2;/* 16 */
+ --sombrio: #13110a;/* 17 */
+ --fada: #a14e9d; /* 18 */
 }

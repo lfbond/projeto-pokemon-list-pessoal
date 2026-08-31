@@ -58,7 +58,51 @@ main > h2 {
  margin-top: 2rem;
 }
 
-main .listagem-pokemon {
+/* Estilos para a busca */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 70%;
+    max-width: 500px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+#searchButton {
+    padding: 12px 25px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#searchButton:hover {
+    background-color: #e55a5a;
+    transform: scale(1.02);
+}
+
+#searchButton:active {
+    transform: scale(0.95);
+}
+
+/* main .listagem-pokemon {
  display: flex;
  flex-wrap: wrap;
  gap: 30px;
@@ -119,4 +163,4 @@ main .descricao {
  overflow-y: scroll;
  font-size: 0.8rem;
  padding-right: 10px;
-}
+} */
