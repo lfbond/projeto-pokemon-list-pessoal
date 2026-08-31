@@ -1,222 +1,139 @@
-# 🎮 Projeto Pokémon List Pessoal
+# 🎮 Pokédex Pessoal
 
 <div align="center">
 
-![Status: Ativo](https://img.shields.io/badge/status-ativo-brightgreen)
-![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Version: 1.0](https://img.shields.io/badge/version-1.0-blue)
-![HTML](https://img.shields.io/badge/HTML5-E34C26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![Status](https://img.shields.io/badge/status-em_desenvolvimento-orange)
+![Licença](https://img.shields.io/badge/license-MIT-blue)
+![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![PokeAPI](https://img.shields.io/badge/API-PokeAPI-ff6b6b)
 
-Uma aplicação web interativa e responsiva para explorar e gerenciar uma coleção personalizada de Pokémon.
-
-[🌐 Visite o Site](https://lfbond.github.io/projeto-pokemon-list-pessoal/) • [📝 Reportar Bug](https://github.com/lfbond/projeto-pokemon-list-pessoal/issues) • [💡 Sugerir Melhoria](https://github.com/lfbond/projeto-pokemon-list-pessoal/issues)
+Aplicação web para consulta de Pokémon com interface responsiva e consumo de API.
 
 </div>
 
 ---
 
-## 📖 Índice
+## 📌 Visão Geral
 
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Objetivo](#-objetivo)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Pré-requisitos](#-pré-requisitos)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Instalação](#-instalação)
-- [Como Usar](#-como-usar)
-- [API Utilizada](#-api-utilizada)
-- [Screenshots](#-screenshots)
-- [Melhorias Futuras](#-melhorias-futuras)
-- [Solução de Problemas](#-solução-de-problemas)
-- [Contribuindo](#-contribuindo)
-- [Autores](#-autores)
-- [Licença](#-licença)
+Este projeto é uma Pokédex pessoal desenvolvida em JavaScript puro, com foco em simplicidade, organização e experiência visual. A aplicação consome a PokeAPI e exibe uma lista inicial de Pokémon com busca por nome ou número.
+
+A estrutura atual foi pensada como base funcional para evoluir em etapas, com organização modular e manutenção mais simples.
 
 ---
 
-## 🎯 Sobre o Projeto
+## ✅ Status Real do Projeto
 
-Bem-vindo ao **Projeto Pokémon List Pessoal**! 
+### Implementado
 
-Este é um site interativo desenvolvido com **vanilla JavaScript** (sem frameworks) que permite aos usuários visualizarem, pesquisarem e explorarem uma lista completa de Pokémon. O projeto combina design responsivo com integração de API em tempo real, oferecendo uma experiência de usuário fluida e agradável.
+- [x] Integração com a PokeAPI
+- [x] Carregamento inicial da lista de Pokémon
+- [x] Busca por nome ou número
+- [x] Renderização de cards com imagem, nome e ID
+- [x] Exibição de tipos por card
+- [x] Tema claro/escuro
+- [x] Cores por tipo de Pokémon
+- [x] Estados de loading, erro e vazio
+- [x] Layout responsivo
+- [x] Estrutura modular em arquivos JavaScript
 
-É um excelente projeto educacional para aprender conceitos modernos de desenvolvimento web como:
-- 🌐 Consumo de APIs REST
-- 🎨 Manipulação e transformação de DOM
-- 📱 Design responsivo e mobile-first
-- ⚡ Assincronismo (Promises, Async/Await)
-- 🎯 Otimização de performance
+### Ainda não implementado
+
+- [ ] Scroll infinito
+- [ ] Separação por temporadas e/ou gerações
+- [ ] Card com descrição do Pokémon
+- [ ] Melhor ataque e pior ataque
+- [ ] Fraquezas e resistências por tipo
+- [ ] Busca por tipo, categoria, temporada e filtros combinados
+- [ ] Modal ou painel detalhado do Pokémon
+- [ ] Ordenação por nome, número ou tipo
+- [ ] Sistema de favoritos
+- [ ] PWA/offline
+
+> A lista acima representa o que está realmente presente no código atual e o que continua como roadmap futuro.
 
 ---
 
-## 🎯 Objetivo
+## 🔎 O que foi validado no código
 
-O objetivo principal deste projeto é:
+A análise foi feita sobre os arquivos principais do projeto:
 
-✅ Fornecer uma interface intuitiva e agradável para explorar dados de Pokémon  
-✅ Demonstrar boas práticas de desenvolvimento web front-end  
-✅ Servir como ferramenta educacional para aprender integração com APIs  
-✅ Oferecer uma experiência responsiva em todos os dispositivos  
-✅ Criar um projeto portfólio de qualidade profissional  
+- [index.html](index.html)
+- [src/js/api.js](src/js/api.js)
+- [src/js/app.js](src/js/app.js)
+- [src/js/render.js](src/js/render.js)
+- [src/js/ui.js](src/js/ui.js)
+- [src/js/theme.js](src/js/theme.js)
+- [src/css/style.css](src/css/style.css)
+- [src/css/global.css](src/css/global.css)
+
+### Conclusão da análise
+
+- O projeto busca dados da PokeAPI com `fetch()` e renderiza os itens em cards.
+- A busca funciona por nome ou número, conforme a lógica em [src/js/app.js](src/js/app.js).
+- O tema escuro é ativado em [src/js/theme.js](src/js/theme.js).
+- A renderização atual mostra imagem, nome e tipos, mas não inclui descrição, ataques, fraquezas, filtros por temporada ou scroll infinito.
+- Não existe implementação de modal, filtros por categoria, ordens avançadas ou agrupamento por temporada.
 
 ---
 
-## 🚀 Funcionalidades
+## 🧱 Estrutura Atual do Projeto
 
-### Principais
-- ✨ **Lista Dinâmica de Pokémon**: Carrega uma lista completa com nome, imagem e número ID
-- 🔍 **Busca Inteligente**: Pesquisa em tempo real por nome ou número de Pokémon
-- 📊 **Informações Detalhadas**: Visualiza tipos, habilidades, altura, peso e estatísticas base
-- 📱 **Design Responsivo**: Funciona perfeitamente em desktop, tablet e smartphone
-- ⚡ **Carregamento Otimizado**: Interface rápida com animações suaves
-- 🎨 **Temas por Tipo**: Cores diferentes para cada tipo de Pokémon (Fogo, Água, Elétrico, etc.)
-- 🔄 **Scroll Infinito**: Carregamento automático de mais Pokémon ao rolar a página
-
-### Recursos de Experiência
-- 🌈 Design atraente e moderno
-- ⌨️ Navegação intuitiva e acessível
-- 💾 Cache inteligente de dados
-- 🎯 Interface amigável para todos os públicos
+```text
+projeto-pokemon-list-pessoal/
+├── IMG GIT/
+│   ├── 01-pokemon-antes.png
+│   └── 02-pokemon-depois.png
+│
+├── index.html
+├── README.md
+├── src/
+│   ├── css/
+│   │   ├── colorTipos.css
+│   │   ├── global.css
+│   │   ├── scrollbar.css
+│   │   └── style.css
+│   │
+│   ├── img/
+│   │   ├── favicon.ico
+│   │   ├── moon.png
+│   │   ├── pokeball.png
+│   │   └── sun.png
+│   │
+│   └── js/
+│       ├── api.js          # Requisições à API da PokeAPI
+│       ├── app.js          # Lógica principal da aplicação
+│       ├── render.js       # Renderização dos cards e estados
+│       ├── theme.js        # Alternância de tema claro/escuro
+│       ├── ui.js           # Gerenciamento de estados da interface
+│       └── utils.js        # Funções utilitárias (capitalização e formatação)
+│
+└──
+```
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Tecnologia | Descrição | Versão |
-|-----------|-----------|--------|
-| **HTML5** | Estrutura semântica do projeto | - |
-| **CSS3** | Estilização, layout flexbox/grid e responsividade | - |
-| **JavaScript (ES6+)** | Lógica, manipulação de DOM e requisições assíncronas | - |
-| **PokeAPI** | API RESTful com dados de Pokémon | v2 |
-| **Fetch API** | Para requisições HTTP | Nativa |
-
-### Recursos CSS Avançados
-- 📐 **Flexbox & Grid**: Layouts modernos e responsivos
-- 🎨 **CSS Variables**: Temas dinâmicos e fácil manutenção
-- ✨ **Animações**: Transições suaves e efeitos visuais
-- 🎯 **Media Queries**: Otimização para todos os tamanhos de tela
+| Tecnologia | Finalidade |
+|-----------|-----------|
+| HTML5 | Estrutura da interface |
+| CSS3 | Estilização, responsividade e tema visual |
+| JavaScript | Lógica da aplicação, consumo de API e renderização |
+| PokeAPI | Fonte de dados dos Pokémon |
+| Fetch API | Requisições assíncronas |
 
 ---
 
-## 📋 Pré-requisitos
+## 📋 Requisitos e Execução
 
-Antes de começar, certifique-se de ter:
+O projeto é estático e não exige instalação de dependências.
 
-- ✅ Um navegador web moderno (Chrome 60+, Firefox 55+, Safari 12+, Edge 79+)
-- ✅ Conexão ativa com a internet (para consumir a API)
-- ✅ (Opcional) Git instalado para clonar o repositório
-- ✅ (Opcional) Um editor de código para modificar o projeto
+### Formas de execução
 
-> **Nota**: Este projeto não requer instalação de dependências, servidores ou ferramentas adicionais!
+#### 1. Abrir diretamente no navegador
 
----
-
-## 📁 Estrutura do Projeto
-
-```
-projeto-pokemon-list-pessoal/
-│
-├── 📄 index.html                    # Arquivo HTML principal
-├── 📄 README.md                     # Este arquivo
-│
-├── 🎨 src/
-│   ├── 📂 css/                      # Arquivos de estilo
-│   │   ├── style.css                # Estilos principais
-│   │   ├── global.css               # Estilos globais e reset
-│   │   ├── colorTipos.css           # Cores específicas para cada tipo de Pokémon
-│   │   └── scrollbar.css            # Estilo customizado da barra de rolagem
-│   │
-│   ├── 📂 js/
-│   │   └── script.js                # Lógica principal da aplicação
-│   │       ├── Fetch de dados da API
-│   │       ├── Manipulação de DOM
-│   │       ├── Funções de busca e filtro
-│   │       └── Event listeners
-│   │
-│   └── 📂 img/                      # Imagens do projeto
-│       ├── 📂 01-Kanto/             # Sprites da região de Kanto
-│       └── 📂 02-Johto/             # Sprites da região de Johto
-│
-└── 📄 LICENSE                       # Licença MIT do projeto
-```
-
-### Descrição dos Arquivos Principais
-
-**index.html**
-- Estrutura HTML5 semântica
-- Container principal para a aplicação
-- Links para arquivos CSS e JS
-- Meta tags para SEO e responsividade
-
-**style.css**
-- Layout principal com Flexbox/Grid
-- Estilização de componentes
-- Animações e transições
-- Estilos responsivos
-
-**global.css**
-- Reset CSS
-- Variáveis CSS globais
-- Tipografia e fontes
-- Estilos de base
-
-**colorTipos.css**
-- Cores por tipo de Pokémon (Fogo, Água, Grama, etc.)
-- Paleta de cores profissional
-- Acessibilidade de contraste
-
-**scrollbar.css**
-- Customização da barra de rolagem
-- Tema coerente com design geral
-
-**script.js**
-- Fetch de dados da PokeAPI
-- Renderização de Pokémon
-- Busca e filtro
-- Event handling
-
----
-
-## 📦 Instalação
-
-### Opção 1: Clonar do GitHub (Recomendado)
-
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/lfbond/projeto-pokemon-list-pessoal.git
-   ```
-
-2. **Acesse o diretório do projeto**:
-   ```bash
-   cd projeto-pokemon-list-pessoal
-   ```
-
-3. **Abra no seu editor favorito** (VS Code, Sublime, etc.):
-   ```bash
-   code .
-   ```
-
-### Opção 2: Download Direto
-
-1. Visite [https://github.com/lfbond/projeto-pokemon-list-pessoal](https://github.com/lfbond/projeto-pokemon-list-pessoal)
-2. Clique em **Code** → **Download ZIP**
-3. Extraia o arquivo na pasta desejada
-
-### Opção 3: Usar Online
-
-Acesse diretamente no GitHub Pages:  
-🌐 [https://lfbond.github.io/projeto-pokemon-list-pessoal/](https://lfbond.github.io/projeto-pokemon-list-pessoal/)
-
----
-
-## 🚀 Como Usar
-
-### Executando Localmente
-
-**Método 1: Abrir arquivo diretamente**
 ```bash
 # Windows
 start index.html
@@ -228,214 +145,91 @@ open index.html
 xdg-open index.html
 ```
 
-**Método 2: Usar um servidor local** (recomendado)
+#### 2. Usar um servidor HTTP local
+
 ```bash
-# Python 3
+cd projeto-pokemon-list-pessoal
 python -m http.server 8000
-
-# Node.js (com http-server instalado)
-npx http-server
-
-# PHP
-php -S localhost:8000
-```
-Depois acesse em seu navegador: `http://localhost:8000`
-
-### Usando a Aplicação
-
-1. **Explorar Pokémon**:
-   - A página carrega automaticamente uma lista de Pokémon
-   - Role para baixo para ver mais
-
-2. **Pesquisar Pokémon**:
-   - Use a barra de busca no topo
-   - Digite o nome ou número do Pokémon
-   - Os resultados são filtrados em tempo real
-
-3. **Ver Detalhes**:
-   - Clique em um Pokémon para ver informações completas
-   - Visualize tipo, altura, peso, habilidades e estatísticas
-
-4. **Explorar por Região**:
-   - Navegue entre diferentes regiões (Kanto, Johto, etc.)
-   - Veja os Pokémon específicos de cada região
-
----
-
-## 🔌 API Utilizada
-
-### PokeAPI v2
-
-Este projeto utiliza a **[PokeAPI](https://pokeapi.co/)**, uma API RESTful gratuita com dados completos sobre Pokémon.
-
-**Endpoints principais utilizados:**
-
-| Endpoint | Descrição |
-|----------|-----------|
-| `GET /api/v2/pokemon/` | Lista de Pokémon (paginada) |
-| `GET /api/v2/pokemon/{id}` | Detalhes de um Pokémon específico |
-| `GET /api/v2/pokemon-species/{id}` | Informações da espécie |
-| `GET /api/v2/type/` | Lista de tipos de Pokémon |
-
-**Exemplo de requisição:**
-```javascript
-// Buscar lista de Pokémon
-fetch('https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Erro:', error));
-
-// Buscar Pokémon específico
-fetch('https://pokeapi.co/api/v2/pokemon/1/')
-  .then(response => response.json())
-  .then(data => console.log(data));
 ```
 
-> **Nota**: A PokeAPI é pública e não requer chaves de API. Recomenda-se fazer cache dos dados para melhor performance.
+Em seguida, acesse:
+
+```text
+http://localhost:8000
+```
+
+
 
 ---
 
-## 📸 Screenshots
+## 🚀 Funcionalidades Atuais
 
-### Interface Principal
-![01-pokemon](https://github.com/user-attachments/assets/5fd48ada-9f17-4efc-83d9-6fd198c5d08a)
+### Listagem inicial
 
-*A tela principal mostra uma grade responsiva de Pokémon com opções de busca*
+A aplicação carrega uma lista inicial de Pokémon ao abrir a página e renderiza os cartões com imagem e número.
 
----
+### Busca
 
-## 🎨 Melhorias Futuras
+A busca atual permite pesquisar por:
 
-### Funcionalidades Planejadas
-- 🏷️ **Filtro Avançado**: Filtrar por tipo, geração, habilidades
-- ⭐ **Sistema de Favoritos**: Salvar Pokémon favoritos em localStorage
-- 📄 **Paginação**: Navegação melhorada entre Pokémon
-- 🌍 **Filtro por Região**: Explorar Pokémon de regiões específicas
-- 🔀 **Ordenação**: Ordenar por nome, ID, tipo, ou estatísticas
-- 📊 **Gráficos de Estatísticas**: Visualizar estatísticas em gráficos
-- 🌙 **Dark Mode**: Tema escuro opcional
-- 🎮 **Comparador de Pokémon**: Comparar estatísticas entre Pokémon
-- 📱 **App Progressiva (PWA)**: Funcionar offline
-- 🔊 **Sons**: Adicionar efeitos sonoros e cries de Pokémon
+- nome do Pokémon
+- número do Pokémon
 
-### Melhorias Técnicas
-- ♿ Melhorar acessibilidade (ARIA labels)
-- ⚡ Implementar Service Workers para offline
-- 🧪 Adicionar testes automatizados
-- 📈 Otimizar performance e SEO
-- 🎯 Implementar carregamento lazy de imagens
+### Interface visual
+
+- cards organizados em grid responsivo
+- botão para alternar tema claro/escuro
+- estilos por tipo de Pokémon
+- feedback visual para carregamento, erro e ausência de resultado
 
 ---
 
-## 🐛 Solução de Problemas
+## � Demonstração visual do projeto
 
-### Problema: Pokémon não carregam
-**Solução:**
-1. Verifique sua conexão com a internet
-2. Abra o console (F12) e procure por erros
-3. Verifique se a PokeAPI está online: [status.pokeapi.co](https://status.pokeapi.co)
-4. Limpe o cache do navegador (Ctrl+Shift+Delete)
+Abaixo estão imagens demonstrativas da evolução visual da interface, armazenadas na pasta de referências do projeto.
 
-### Problema: Imagens não aparecem
-**Solução:**
-1. Verifique se as pasta `/img` está na raiz do projeto
-2. Verifique permissões de arquivo
-3. Tente executar em um servidor local em vez de arquivo direto
+### Antes
 
-### Problema: Busca lenta ou não funciona
-**Solução:**
-1. Verifique se JavaScript está habilitado
-2. Limpe o cache do navegador
-3. Tente em um navegador diferente
-4. Verifique o console para erros (F12)
+![Antes do projeto](IMG%20GIT/01-pokemon-antes.png)
 
-### Problema: Layout quebrado no celular
-**Solução:**
-1. Verifique meta viewport em `index.html`
-2. Teste em diferentes orientações
-3. Limpe cache e cookies
-4. Atualize o navegador
+### Depois
+
+![Depois do projeto](IMG%20GIT/02-pokemon-depois.png)
+
+> Essas imagens servem como registro visual do progresso do projeto e do refinamento da interface.
 
 ---
 
-## 💡 Contribuindo
+## �📈 Roadmap de Melhorias
 
-Contribuições são bem-vindas e muito valorizadas! 
+As próximas etapas planejadas são as melhorias mencionadas anteriormente e que ainda não estão presentes no código atual:
 
-### Como Contribuir
-
-1. **Faça um Fork** do repositório
-2. **Crie uma branch** para sua feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit suas mudanças** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push para a branch** (`git push origin feature/AmazingFeature`)
-5. **Abra um Pull Request**
-
-### Diretrizes de Contribuição
-
-- Mantenha o código limpo e bem organizado
-- Adicione comentários em código complexo
-- Teste suas mudanças em múltiplos navegadores
-- Siga as convenções de nomeação existentes
-- Atualize o README se necessário
-
-### Reportar Bugs
-
-Encontrou um bug? Abra uma [issue](https://github.com/lfbond/projeto-pokemon-list-pessoal/issues) com:
-- Descrição clara do problema
-- Passos para reproduzir
-- Comportamento esperado vs. real
-- Screenshots se aplicável
-- Navegador e OS utilizado
+- [ ] Scroll infinito
+- [ ] Separação por temporadas e/ou gerações
+- [ ] Cards com mais detalhes de cada Pokémon
+- [ ] Tipo, descrição, melhor ataque e pior ataque
+- [ ] Fraquezas e resistências por tipo
+- [ ] Sistema de busca por tipo, categoria, temporada e filtros combinados
+- [ ] Modal ou painel detalhado
+- [ ] Ordenação por número, nome e tipo
+- [ ] Filtros avançados e melhor UX
+- [ ] Melhorias de performance e organização da interface
 
 ---
 
-## 👥 Autores
+## 🧭 Status do Projeto
 
-**Luis Felipe Bond**
-- GitHub: [@lfbond](https://github.com/lfbond)
-- Email: contato@lfbond.com
-- Portfolio: [lfbond.com](https://lfbond.com)
+O projeto está em uma fase funcional de base inicial, com estrutura bem organizada para expansão. Ele já entrega a visualização e busca básica de Pokémon, mas ainda não inclui os recursos avançados esperados para uma Pokédex mais completa.
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas. O ideal é manter a arquitetura simples, a legibilidade do código e a evolução gradual das funcionalidades.
 
 ---
 
 ## 📄 Licença
 
-Este projeto está sob a licença **MIT** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a licença MIT.
 
-A licença MIT permite que você:
-- ✅ Use, copie e modifique o código
-- ✅ Distribua cópias
-- ✅ Inclua em projetos comerciais
-
-Com apenas o requisito de incluir a licença e aviso de copyright.
-
----
-
-## 🙏 Agradecimentos
-
-- **PokeAPI**: Pelos dados incríveis e API pública
-- **Comunidade Open Source**: Pela inspiração e suporte
-- **Pokémon**: Pela franquia e inspiração
-
----
-
-## 📞 Suporte
-
-Se você tiver dúvidas ou precisar de ajuda:
-
-1. 📖 Consulte a seção [Solução de Problemas](#-solução-de-problemas)
-2. 🔍 Procure em [Issues existentes](https://github.com/lfbond/projeto-pokemon-list-pessoal/issues)
-3. 💬 Abra uma nova [Discussion](https://github.com/lfbond/projeto-pokemon-list-pessoal/discussions)
-4. 📧 Entre em contato direto
-
----
-
-<div align="center">
-
-**[⬆ Voltar ao Topo](#-projeto-pokémon-list-pessoal)**
-
-Feito com ❤️ por [Luis Felipe Bond](https://github.com/lfbond)
-
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=lfbond.projeto-pokemon-list-pessoal)
-
-</div>

@@ -77,13 +77,13 @@ main > h2 {
 }
 
 #searchInput:focus {
-    border-color: #ff6b6b;
+    border-color: var(--botao);
     outline: none;
 }
 
 #searchButton {
     padding: 12px 25px;
-    background-color: #ff6b6b;
+    background-color: var(--botao);
     color: white;
     border: none;
     border-radius: 25px;
@@ -94,7 +94,7 @@ main > h2 {
 }
 
 #searchButton:hover {
-    background-color: #e55a5a;
+    background-color: var(--botao-hover);
     transform: scale(1.02);
 }
 
@@ -111,7 +111,7 @@ main > h2 {
 }
 
 .pokemon-card {
-    background-color: #fafafa;
+    background-color: var(bg-card-pokemon-light);
     border-radius: 16px;
     padding: 20px 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -134,12 +134,12 @@ main > h2 {
 .pokemon-card .name {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: var(--text-light) ;
 }
 
 .pokemon-card .number {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--empty-message);
     margin-bottom: 5px;
 }
 
@@ -152,8 +152,8 @@ main > h2 {
 }
 
 .pokemon-card .type {
-    background: #e0e0e0;
-    color: #333;
+    background: var(--white);
+    color: var( --text-light);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -168,24 +168,24 @@ main > h2 {
     text-align: center;
     padding: 40px 20px;
     font-size: 1.2rem;
-    color: #555;
+    color: var(--empty-message);
 }
 
 .loading-message {
-    color: #ff6b6b;
+    color: var(--botao) ;
 }
 .error-message {
-    color: #d63031;
+    color: var(--error-message);
 }
 .empty-message {
-    color: #777;
+    color: var(--empty-message);
 }
 
 .error-message button {
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #0984e3;
-    color: white;
+    background-color: var(--erro-mensagem);
+    color: var(--white);
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -194,7 +194,7 @@ main > h2 {
 }
 
 .error-message button:hover {
-    background-color: #0873c7;
+    background-color: var(--erro-mensagem-hover);
 }
 
 
